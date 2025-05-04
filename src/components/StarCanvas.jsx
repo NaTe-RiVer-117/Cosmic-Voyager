@@ -99,12 +99,12 @@ const StarBackground = (props) => {
 
 const StarCanvas = () => {
   return (
-    <div className=" w-50 h-50 pointer-events-none border-2 border-amber-500">
+    <div className="w-full h-screen pointer-events-none ">
       <Canvas 
         camera={{ position: [0, 0, 1], fov: 75 }}
         gl={{ antialias: false }} 
       >
-        <color attach="background" args={['#020207']} /> // Darker background
+        <color attach="background" args={['#000']} /> // Darker background
         <Suspense fallback={null}>
           <StarBackground />
           <EffectComposer multisampling={8}>

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom'; // Assuming you're using React Router
+import FloatingModel from '../components/FloatingModel';
+import { Canvas } from '@react-three/fiber';
 
 const LandingPage = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -8,6 +10,7 @@ const LandingPage = () => {
   return (
     <div className="relative w-full h-screen bg-gradient-to-br from-black via-purple-900 to-blue-900 overflow-hidden flex items-center justify-center p-8">
       {/* Animated Background Particles (simplified) */}
+    
       <div className="absolute inset-0 overflow-hidden">
         {[...Array(20)].map((_, i) => (
           <motion.div
